@@ -30,6 +30,21 @@
 - || : or
 - ! : not
 
+# 연산자
+## 몫과 나머지
+- Python과 달리 // 을 사용하기 어렵다.
+  - floor 등을 사용한다.
+    ```js
+    console.log(Math.floor(a/b));
+    // 내림
+    
+    console.log(Math.trunc(a/b));
+    // 소수점 이하 버림
+    
+    console.log(parseInt(a/b));
+    // 정수로 반환, 숫자에 사용하는 경우 소수점 버림
+    ```
+
 # 조건문
 - 삼항 연산자의 경우 dart와 동일
 - 일반 조건문의 경우 if (condition) {수행} 형태
