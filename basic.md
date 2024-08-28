@@ -41,6 +41,53 @@
     - 일반 array에서 in을 사용하면 index를 가져옴
 - for (var of iterable) {} : 반복 가능한 객체 (배열(array) 및 문자열)
 
+# Object 관리
+## slice(a, b)
+- array 자르기 (a부터 b index)
+
+## splice (a, b, 'add array1' ...)
+- array를 a부터 b개를 제거하고 뒤에 항목을 추가하는 작업
+- b를 0으로 두면 단순 삽입 기능 구현 가능
+
+## reverse()
+- array를 거꾸로 배치
+- string을 거꾸로 하는 함수가 존재하지 않기에, string을 다음과 같은 과정을 통해 거꾸로 배치 가능
+```js
+input = '거꾸로';
+reversed = input.split('').reverse().join('')
+console.log(reverse)
+```
+
+# string 관리
+## repeat()
+- str은 python과 달리 문자열을 숫자로 곱하여 반복할 수 없음.
+- str.repeat(number) 으로 number만큼 반복 가능
+
+# class
+- Dart와 크게 다르지 않음.
+```js
+class Wizard {
+    constructor(health, mana, armor) {
+        this.health = health;
+        this.mana = mana;
+        this.armor = armor;
+    }
+
+    attack() {
+        console.log('파이어볼')
+    }
+}
+
+
+const x = new Wizard(545, 210, 10);
+console.log(x.health, x.mana, x.armor);
+x.attack();
+
+// {/*출력*/}
+// 545 210 10
+// 파이어볼
+```
+
 # 백준에서 nodejs로 알고리즘 푸는 방법
 ## 입력하는게 한 줄 일때
 ```js
