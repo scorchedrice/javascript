@@ -76,7 +76,39 @@ for (let value of map.values()) {
 }
 ```
 
-# Object 관리
+# 일반 객체 vs Map()
+- Map이 메모리 사용량이 많으나 성능자체는 우수하다.
+
+# Set
+- 고유 값 관리, 중복 제거 등에 활용.
+  - Python의 set과 동일
+## Set생성 및 관리방법
+```js
+let mySet = new Set();
+
+// set 추가
+mySet.add(1);
+mySet.add(3);
+mySet.add(1);
+console.log(mySet);
+
+// set 내부 존재 확인
+console.log(mySet.has(1));
+console.log(mySet.has(999));
+
+// mySet 값 제거
+mySet.delete(1);
+console.log(mySet);
+
+// 중복 제거 활용 Object => Set => Object
+let numbers = [1,1,1,2,2,3,4,5]
+let uniquenumbers = new Set(numbers)
+console.log(uniquenumbers);
+uniquenumbers = [...uniquenumbers]
+console.log(uniquenumbers);
+```
+
+#배열 관리
 ## slice(a, b)
 - array 자르기 (a부터 b index)
 
@@ -93,10 +125,17 @@ reversed = input.split('').reverse().join('')
 console.log(reverse)
 ```
 
+## push
+- 배열에 값 추가
+
 # string 관리
 ## repeat()
 - str은 python과 달리 문자열을 숫자로 곱하여 반복할 수 없음.
 - str.repeat(number) 으로 number만큼 반복 가능
+
+## 대소문자
+- toUpperCase()
+- toLowerCase()
 
 # class
 - Dart와 크게 다르지 않음.
