@@ -41,6 +41,41 @@
     - 일반 array에서 in을 사용하면 index를 가져옴
 - for (var of iterable) {} : 반복 가능한 객체 (배열(array) 및 문자열)
 
+# HashMap in JS
+```js
+// 1. map생성
+var map = new Map();
+
+// 2. map에 데이터 추가 (map.set)
+map.set('example number', 4);
+
+// 3. map의 정보 가져오기 (map.get)
+console.log(map.get('example number'))
+
+// 4. map에 존재여부 확인
+console.log(map.has('test number')
+
+// 5. map의 사이즈
+console.log(map.size) // 이게 정답
+console.log(map.length) // undefined
+
+// 6. 탐색
+// key, value 쌍으로 출력
+for (let [key, value] of map) {
+  console.log(key + ' = ' + value)
+}
+
+// key만 출력
+for (let key of map.keys()) {
+  console.log(key)
+}
+
+// value만 출력
+for (let value of map.values()) {
+  console.log(value)
+}
+```
+
 # Object 관리
 ## slice(a, b)
 - array 자르기 (a부터 b index)
