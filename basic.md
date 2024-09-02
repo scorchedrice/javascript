@@ -109,6 +109,9 @@ console.log(uniquenumbers);
 ```
 
 #배열 관리
+## map(원하는 조치)
+- 배열의 모든 값에 해당 조치 시행
+
 ## slice(a, b)
 - array 자르기 (a부터 b index)
 
@@ -127,6 +130,14 @@ console.log(reverse)
 
 ## push
 - 배열에 값 추가
+
+## unshift
+- 배열 앞에 값 추가
+
+# 배열간 비교
+- `===` 으로 비교할 때 같더라도 다른 값이 나오는 경우
+  - 이는 javaScript가 값이 아닌 참조를 비교하기 대문에 다른 값이 나올 수 있다.
+    - join()을 활용 혹은 반복문을 활용해서 비교하는게 적합.
 
 # string 관리
 ## repeat()

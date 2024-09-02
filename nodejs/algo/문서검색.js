@@ -1,9 +1,31 @@
-const input = require('fs').readFileSync("../input.txt").toString().replace(/\r/g, "").trim().split('\n');
+const readline = require('readline')
+const rl = readline.createInterface({
+    input: process.stdin, output: process.stdout,
+})
 
-// const input = require('fs').readFileSync("/dev/stdin").toString().trim();
-const lst = input[0].split('');
-const block = input[1].split('');
+const input = require('fs').readFileSync("../input.txt").toString();
+// const input = require('fs').readFileSync("/dev/stdin").toString();
 
-console.log(lst, block)
+const data= input.split('\n');
+const target = data[0];
+const block = data[1];
 
-// console.log(lst.slice(0,2)) : idx 0과 1
+function search() {
+    let idx = 0
+    let result = 0
+    while (idx + block.length <= target.length) {
+        let pivot = target.slice(idx, idx + block.length);
+        // console.log(pivot, block)
+        if (pivot === block) {
+            result ++
+            idx = idx + block.length
+        } else {
+            idx ++
+        }
+
+    }
+    console.log(result)
+    return
+}
+
+search();
